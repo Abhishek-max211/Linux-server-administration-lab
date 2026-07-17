@@ -57,7 +57,7 @@ The following commands were executed to collect basic server information:
 - `free -h`
 - `lscpu`
 
-![Basic System Information](system-info-1.png)
+![Basic System Information](system-info1.png)
 
 ---
 
@@ -69,7 +69,7 @@ The following command was used to identify the installed Ubuntu version and oper
 
 This screenshot also includes the remaining output from the CPU information command.
 
-![Operating System Information](system-info-2.png)
+![Operating System Information](system-info2.png)
 
 ---
 
@@ -83,7 +83,7 @@ The following commands were executed:
 
 This verifies the server's IP address and confirms that the hostname was successfully changed.
 
-![Network & Hostname Configuration](system-info-3.png)
+![Network & Hostname Configuration](system-info3.png)
 
 ---
 
