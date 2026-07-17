@@ -1,31 +1,30 @@
 # 👥 User & Group Administration
 
-> **Module 02** of the Linux Administration Lab
+> **Module 02** of the **Linux Administration Lab**
 
 ## 📖 Overview
 
-User and Group Administration is one of the core responsibilities of a Linux System Administrator. It involves creating users and groups, assigning permissions, managing user accounts, and controlling administrative access to maintain a secure multi-user environment.
+User and Group Administration is one of the most important responsibilities of a Linux System Administrator. It enables administrators to create and manage user accounts, organize users into groups, assign administrative privileges, and maintain a secure multi-user environment.
 
 ---
 
 ## 🎯 Objectives
 
-In this lab, you will learn how to:
+In this lab, I performed the following tasks:
 
-- Create users
-- Create groups
-- Assign primary and secondary groups
-- Set user passwords
-- Modify user accounts
-- Verify user information
-- Grant administrative privileges
-- Delete users and groups
+- Created user groups
+- Created multiple user accounts
+- Set passwords for users
+- Added users to groups
+- Granted administrative (sudo) privileges
+- Verified user and group information
+- Switched between user accounts
 
 ---
 
 ## 💼 Scenario
 
-As a Linux Administrator at **TechNova Pvt. Ltd.**, you have been asked to onboard new employees from different departments. Your task is to create user accounts, organize them into groups, assign administrative privileges where required, and verify the configuration.
+As a Linux Administrator at **TechNova Pvt. Ltd.**, new employees have joined the Development and System Administration teams. Your responsibility is to create user accounts, organize them into appropriate groups, assign administrative privileges where required, and verify the configuration.
 
 ---
 
@@ -37,19 +36,21 @@ sudo groupadd developers
 sudo groupadd sysadmins
 
 # Create Users
-sudo useradd -m -g developers alice
-sudo useradd -m -g developers bob
-sudo useradd -m -g sysadmins john
+sudo useradd alice
+sudo useradd bob
+sudo useradd john
 
 # Set Passwords
 sudo passwd alice
 sudo passwd bob
 sudo passwd john
 
-# Add User to Secondary Group
-sudo usermod -aG developers john
+# Add Users to Groups
+sudo usermod -aG developers alice
+sudo usermod -aG developers bob
+sudo usermod -aG sysadmins john
 
-# Grant Administrative Privileges
+# Grant Sudo Access
 sudo usermod -aG sudo john
 
 # Verify User Information
@@ -57,88 +58,26 @@ id alice
 id bob
 id john
 
-groups john
-
-# Display User Details
-getent passwd alice
-getent group developers
-
-# Delete User
-sudo userdel -r alice
-
-# Delete Group
-sudo groupdel developers
+# Switch User
+su john
+whoami
 ```
 
 ---
 
 # 📸 Lab Execution
 
-## Screenshot 1 – Create Users & Groups
+The screenshot below demonstrates the complete user and group management workflow, including:
 
-The following tasks were completed:
+- Creating user groups (`developers` and `sysadmins`)
+- Creating users (`alice`, `bob`, and `john`)
+- Setting passwords
+- Adding users to groups
+- Granting sudo privileges to `john`
+- Verifying user and group memberships using the `id` command
+- Switching to the `john` user and confirming the active user with `whoami`
 
-- Created groups
-- Created users
-- Assigned primary groups
-- Set passwords
-
-![Create Users & Groups](./screenshots/user-group-1.png)
-
----
-
-## Screenshot 2 – User Verification
-
-Verified:
-
-- User ID
-- Group Membership
-- User Information
-
-Commands used:
-
-```bash
-id alice
-id bob
-id john
-groups john
-```
-
-![User Verification](./screenshots/user-group-2.png)
-
----
-
-## Screenshot 3 – Administrative Privileges
-
-Granted sudo access and verified user details.
-
-Commands used:
-
-```bash
-sudo usermod -aG sudo john
-
-groups john
-
-id john
-```
-
-![Administrative Access](./screenshots/user-group-3.png)
-
----
-
-## Screenshot 4 – User & Group Cleanup
-
-Removed unnecessary users and groups.
-
-Commands used:
-
-```bash
-sudo userdel -r alice
-
-sudo groupdel developers
-```
-
-![Cleanup](./screenshots/user-group-4.png)
+![User & Group Management](./screenshots/user-group-management.png)
 
 ---
 
@@ -146,14 +85,13 @@ sudo groupdel developers
 
 After completing this lab, I successfully:
 
-- Created Linux users
+- Created Linux user accounts
 - Created Linux groups
-- Assigned primary and secondary groups
-- Set passwords
+- Assigned users to appropriate groups
+- Configured user passwords
 - Granted administrative privileges
-- Verified user information
-- Managed user accounts
-- Deleted users and groups
+- Verified user and group memberships
+- Switched between user accounts for validation
 
 ---
 
@@ -163,10 +101,7 @@ After completing this lab, I successfully:
 02-user-group-administration/
 ├── README.md
 └── screenshots/
-    ├── user-group-1.png
-    ├── user-group-2.png
-    ├── user-group-3.png
-    └── user-group-4.png
+    └── user-group-management.png
 ```
 
 ---
@@ -175,14 +110,13 @@ After completing this lab, I successfully:
 
 ```bash
 groupadd
-groupdel
 useradd
-userdel
-usermod
 passwd
+usermod
 id
-groups
-getent
+who
+whoami
+su
 ```
 
 ---
@@ -192,22 +126,22 @@ getent
 - Linux User Management
 - Linux Group Management
 - User Account Administration
-- Administrative Access Management
+- Group Membership Management
+- Sudo Privilege Management
 - User Verification
-- Linux Security Fundamentals
 
 ---
 
 # 📌 Key Takeaways
 
-- Learned how to create and manage Linux users.
-- Organized users using primary and secondary groups.
-- Assigned administrative privileges using the `sudo` group.
-- Verified user and group configurations.
-- Practiced managing user accounts in a multi-user Linux environment.
+- Learned how to create and manage Linux users and groups.
+- Assigned users to appropriate groups using `usermod`.
+- Granted administrative access through the `sudo` group.
+- Verified user identities and group memberships using the `id` command.
+- Practiced switching between user accounts to validate configurations.
 
 ---
 
 ## 🚀 Next Module
 
-➡️ **03 - File & Directory Management**
+➡️ **03 - Directory & Permission Management**
