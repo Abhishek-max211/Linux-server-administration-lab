@@ -77,7 +77,7 @@ The screenshot below demonstrates the complete user and group management workflo
 - Verifying user and group memberships using the `id` command
 - Switching to the `john` user and confirming the active user with `whoami`
 
-![User & Group Management](user and group management.png)
+![User & Group Management](user_and_group_management.png)
 
 ---
 
