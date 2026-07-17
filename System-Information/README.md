@@ -1,287 +1,126 @@
 # 🖥️ System Information
 
-Collect and analyze essential information about an Ubuntu Server before performing any administration tasks.
+> **Module 01** of the Linux Administration Lab
+
+## 📖 Overview
+
+Before configuring any Linux server, it is important to gather essential system information. This helps administrators understand the server environment, hardware resources, operating system, and network configuration before performing administrative tasks.
 
 ---
 
-## 🎯 Objective
+## 🎯 Objectives
 
-This lab demonstrates how to gather important system information using standard Linux commands.
+In this lab, you will learn how to:
 
-Topics covered:
-
-- Hostname
-- Current User
-- Operating System
-- Kernel Version
-- CPU Information
-- Memory Information
-- Disk Usage
-- Network Configuration
-- Routing Table
-- System Date & Time
+- Check the current hostname
+- Identify the logged-in user
+- View active login sessions
+- Display the Linux kernel version
+- Check disk usage
+- Monitor memory utilization
+- Display CPU information
+- Identify the Ubuntu version
+- View network interface information
+- Change the hostname
 
 ---
 
-## 📋 Lab Tasks
-
-### 1. Check Hostname
-
-**Command**
+# 📋 Commands Used
 
 ```bash
 hostname
-```
-
-**Description**
-
-Displays the current hostname of the system.
-
-**Output**
-
-> Replace this image with your own screenshot.
-
-![Hostname](./screenshots/hostname.png)
-
----
-
-### 2. Display Detailed Host Information
-
-**Command**
-
-```bash
-hostnamectl
-```
-
-**Description**
-
-Displays detailed information about the operating system, hostname, architecture, and kernel.
-
-**Output**
-
-![Hostnamectl](./screenshots/hostnamectl.png)
-
----
-
-### 3. Display Current User
-
-**Command**
-
-```bash
 whoami
-```
-
-**Description**
-
-Shows the username of the currently logged-in user.
-
-**Output**
-
-![Whoami](./screenshots/whoami.png)
-
----
-
-### 4. Display User Information
-
-**Command**
-
-```bash
-id
-```
-
-**Description**
-
-Displays the user's UID, GID, and group memberships.
-
-**Output**
-
-![ID](./screenshots/id.png)
-
----
-
-### 5. Display Ubuntu Version
-
-**Command**
-
-```bash
-cat /etc/os-release
-```
-
-**Description**
-
-Displays detailed information about the installed Ubuntu operating system.
-
-**Output**
-
-![Ubuntu Version](./screenshots/os-release.png)
-
----
-
-### 6. Display Kernel Version
-
-**Command**
-
-```bash
+who
 uname -r
-```
-
-**Description**
-
-Displays the running Linux kernel version.
-
-**Output**
-
-![Kernel Version](./screenshots/kernel.png)
-
----
-
-### 7. Display CPU Information
-
-**Command**
-
-```bash
-lscpu
-```
-
-**Description**
-
-Displays processor architecture, cores, threads, virtualization support, and CPU model.
-
-**Output**
-
-![CPU Information](./screenshots/lscpu.png)
-
----
-
-### 8. Display Memory Information
-
-**Command**
-
-```bash
-free -h
-```
-
-**Description**
-
-Displays RAM and swap memory usage.
-
-**Output**
-
-![Memory Information](./screenshots/free-h.png)
-
----
-
-### 9. Display Disk Usage
-
-**Command**
-
-```bash
 df -h
-```
-
-**Description**
-
-Displays mounted file systems and available disk space.
-
-**Output**
-
-![Disk Usage](./screenshots/df-h.png)
-
----
-
-### 10. Display Network Interfaces
-
-**Command**
-
-```bash
+free -h
+lscpu
+cat /etc/os-release
 ip addr
+sudo hostnamectl set-hostname webserver01
+hostname
 ```
-
-**Description**
-
-Displays network interfaces and assigned IP addresses.
-
-**Output**
-
-![IP Address](./screenshots/ip-addr.png)
 
 ---
 
-### 11. Display Routing Table
+# 📸 Lab Execution
 
-**Command**
+## Screenshot 1 – Basic System Information
 
-```bash
-ip route
-```
+The following commands were executed to collect basic server information:
 
-**Description**
+- `hostname`
+- `whoami`
+- `who`
+- `uname -r`
+- `df -h`
+- `free -h`
+- `lscpu`
 
-Displays the routing table and default gateway.
-
-**Output**
-
-![Routing Table](./screenshots/ip-route.png)
-
----
-
-### 12. Display Date & Time
-
-**Command**
-
-```bash
-date
-```
-
-**Description**
-
-Displays the current system date and time.
-
-**Output**
-
-![Date](./screenshots/date.png)
+![Basic System Information](./screenshots/system-info-1.png)
 
 ---
 
-# 📂 Directory Structure
+## Screenshot 2 – Operating System Information
 
-```
+The following command was used to identify the installed Ubuntu version and operating system details.
+
+- `cat /etc/os-release`
+
+This screenshot also includes the remaining output from the CPU information command.
+
+![Operating System Information](./screenshots/system-info-2.png)
+
+---
+
+## Screenshot 3 – Network & Hostname Configuration
+
+The following commands were executed:
+
+- `ip addr`
+- `sudo hostnamectl set-hostname webserver01`
+- `hostname`
+
+This verifies the server's IP address and confirms that the hostname was successfully changed.
+
+![Network & Hostname Configuration](./screenshots/system-info-3.png)
+
+---
+
+# ✅ Outcome
+
+After completing this lab, I successfully:
+
+- Collected server information
+- Verified the current user
+- Identified the Ubuntu version
+- Checked the Linux kernel version
+- Monitored CPU, RAM, and disk usage
+- Retrieved the server IP address
+- Changed the hostname successfully
+
+---
+
+# 📁 Directory Structure
+
+```text
 01-system-information/
 ├── README.md
 └── screenshots/
-    ├── hostname.png
-    ├── hostnamectl.png
-    ├── whoami.png
-    ├── id.png
-    ├── os-release.png
-    ├── kernel.png
-    ├── lscpu.png
-    ├── free-h.png
-    ├── df-h.png
-    ├── ip-addr.png
-    ├── ip-route.png
-    └── date.png
+    ├── system-info-1.png
+    ├── system-info-2.png
+    └── system-info-3.png
 ```
 
 ---
 
-# ✅ Skills Practiced
+# 🎓 Skills Practiced
 
 - Linux System Information
 - Ubuntu Server Administration
-- User Identification
+- System Monitoring
 - Hardware Inspection
 - Memory Monitoring
-- Disk Monitoring
+- Storage Monitoring
 - Network Configuration
-- Routing Information
-- Basic Linux Commands
-
----
-
-# 📖 Key Takeaways
-
-- Learned how to inspect a newly deployed Ubuntu Server.
-- Collected hardware and operating system information.
-- Verified network and storage configuration.
-- Understood the importance of documenting server details before making changes.
+- Hostname Management
