@@ -699,6 +699,6 @@ curl
 Aspiring Cloud & DevOps Engineer
 
 * GitHub: https://github.com/Abhishek-max211
-* LinkedIn: https://www.linkedin.com/in/abhishek-pundir-334473314?
+* LinkedIn: https://www.linkedin.com/in/abhishek-pundir-334473314
 
 ---
