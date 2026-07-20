@@ -112,7 +112,7 @@ Completed the following tasks:
 - Listed all running processes using `ps aux`
 
 ```markdown
-![Running Processes](./screenshots/running-processes.png)
+![Running Processes](running-processes.png)
 ```
 
 ---
@@ -126,7 +126,7 @@ Completed the following tasks:
 - Viewed running processes using `top`
 
 ```markdown
-![Top Command](./screenshots/top-command.png)
+![Top Command](top-command.png)
 ```
 
 ---
@@ -139,7 +139,7 @@ Completed the following tasks:
 - Monitored system resources interactively
 
 ```markdown
-![HTop](./screenshots/htop.png)
+![HTop](htop.png)
 ```
 
 ---
@@ -154,7 +154,7 @@ Completed the following tasks:
 - Verified successful termination
 
 ```markdown
-![Background Process](./screenshots/background-process.png)
+![Background Process](background-process.png)
 ```
 
 ---
