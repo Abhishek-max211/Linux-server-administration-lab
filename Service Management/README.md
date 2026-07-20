@@ -182,9 +182,9 @@ Completed the following tasks:
 screenshots/service-stop.png
 ```
 
-```markdown
+
 ![Service Stop](service-stop.png)
-```
+
 
 ---
 
@@ -196,9 +196,9 @@ Completed the following tasks:
 - Verified active status
 - Confirmed service processes
 
-```markdown
+
 ![Service Start](service-start.png)
-```
+
 
 ---
 
@@ -211,9 +211,9 @@ Completed the following tasks:
 - Verified active status
 - Verified boot configuration
 
-```markdown
+
 ![Enable Service](service-enable.png)
-```
+
 
 ---
 
@@ -225,9 +225,9 @@ Completed the following tasks:
 - Stopped the service
 - Verified connection failure
 
-```markdown
+
 ![Service Test Failed](service-test-failed.png)
-```
+
 
 ---
 
@@ -239,9 +239,9 @@ Completed the following tasks:
 - Verified website accessibility
 - Displayed the default Nginx page using curl
 
-```markdown
+
 ![Service Test Success](service-test-success.png)
-```
+
 
 ---
 
