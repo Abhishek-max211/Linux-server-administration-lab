@@ -163,4 +163,4 @@ After completing this lab, I successfully:
 
 ## 🚀 Next Module
 
-➡️ **Module 11 – Log Management & System Monitoring**
+➡️ **Module 11 – Archiving & Backup**
